@@ -18,8 +18,10 @@ Feel free to ask anything about using MemoK.
 ## FAQ
 **Q: Does MemoK upload my recordings to a server?**
 A: No. All recordings are stored locally on your device and never leave your phone.
+
 **Q: How do I protect important recordings from being deleted?**
 A: Tap the star icon on any recording to mark it as protected.
+
 **Q: Why did my recording stop?**
 A: Check if the recording time falls within your scheduled recording window in Settings.
 ---
