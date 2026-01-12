@@ -24,6 +24,7 @@ A: Tap the star icon on any recording to mark it as protected.
 
 **Q: Why did my recording stop?**
 A: Check if the recording time falls within your scheduled recording window in Settings.
+
 ---
 
 
