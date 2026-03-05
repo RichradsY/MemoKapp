@@ -1,3 +1,6 @@
+# Notice: V1.3 is coming soon, fixed bugs (pause issue, ipods use case, etc)
+
+
 # MemoKapp
 MemoK supporting and related feedbacks, plans
 
