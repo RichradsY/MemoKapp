@@ -1,321 +1,131 @@
-# Notice: V1.3 is coming soon, fixed bugs (pause issue, ipods use case, etc)
+# MemoK
 
+Privacy-first background recording for iPhone, built for real-world interruptions.
 
-# MemoKapp
-MemoK supporting and related feedbacks, plans
+[App Store](https://apps.apple.com/us/app/id6757718388) · [User Guide](./USER_GUIDE.md) · [Privacy Policy](./PRIVACY_POLICY.md)  · [中文](#中文)
 
-# Welcome to MemoK Support! 👋
-Thank you for using MemoK - your intelligent time-slot recording assistant.
-## How to Get Help
-**🐛 Report a Bug**
-Please include:
-- Device model (e.g., iPhone 15)
-- iOS version
-- Steps to reproduce the issue
-- Screenshots if possible
-**💡 Feature Request**
-Describe what you'd like to see and why it would be helpful.
-**❓ General Questions**
-Feel free to ask anything about using MemoK.
----
-## FAQ
-**Q: Does MemoK upload my recordings to a server?**
-A: No. All recordings are stored locally on your device and never leave your phone.
+## English
 
-**Q: How do I protect important recordings from being deleted?**
-A: Tap the star icon on any recording to mark it as protected.
+MemoK is an iPhone background recorder for meetings, lectures, interviews, and voice notes.
 
-**Q: Why did my recording stop?**
-A: Check if the recording time falls within your scheduled recording window in Settings.
+The app was shaped gradually through real user feedback. Many of the latest improvements focus on the places where recording apps usually fail in everyday use: interruptions, long-session management, quick switching to Camera, and keeping recordings organized afterward.
 
----
+### Why MemoK
 
-# MemoK User Guide / 使用说明
+- Built for long sessions you can trust, not just quick memos
+- Designed around real iPhone context switching instead of ideal conditions
+- Local-first by default: no account required, no ads, no IAP
 
-[English](#english) | [中文](#中文) | [Français](#français) | [Español](#español) | [Italiano](#italiano) | [العربية](#العربية)
+### Highlights
 
----
+#### Recording reliability
 
-# English
+- Background continuous recording
+- Scheduled recording windows and all-day mode
+- Smart segmented recording from `1` to `180` minutes
+- Save-first, auto-resume oriented interruption recovery
+- Better coexistence with dictation and other short audio-session takeovers
+- More resilient recording during quick photo / video switching
 
-## Getting Started
+#### Review and organization
 
-### First Launch
-1. Open MemoK and grant microphone permission when prompted
-2. The app will show your current recording status and schedule
+- Waveform playback for faster review
+- Quick Notes attached to recordings, exported as Markdown
+- Batch export and batch delete
+- Custom export filenames with variable templates
+- Star protection for important files
+- Automatic cleanup for excess files
 
-### Start Recording
-- Tap the **Start** button to begin recording
-- Recording will automatically save in segments based on your settings
+#### Product details
 
-### Stop Recording
-- Tap the **Stop** button to end the recording session
-- The current segment will be saved automatically
+- Audio quality options: Low / Medium / High
+- Dark / Light / System theme
+- Daily stats and lightweight diagnostics export
+- Multi-language support
 
-## Features
+### Privacy
 
-### Scheduled Recording
-Set daily recording hours in Settings:
-- **Start Time**: When recording becomes available
-- **End Time**: When recording stops
-- Recording only works within this time window
+- Recordings stay on-device by default
+- MemoK does not upload recordings to external servers by default
+- Please follow local laws and obtain consent before recording
 
-### Segment Duration
-Choose how long each recording segment should be (5-60 minutes). When a segment ends, a new one starts automatically.
+### Boundaries
 
-### Storage Management
-- Set maximum files to keep
-- Oldest recordings are deleted automatically when limit is reached
-- **Starred recordings are protected** from automatic deletion
+- MemoK does **not** record phone calls
+- MemoK does **not** capture third-party app audio streams
 
-### Playing Recordings
-1. Tap the play button on any recording
-2. Use the waveform to seek to any position
-3. Adjust playback speed (0.5x - 2x)
-4. Use Previous/Next to navigate between recordings
+### Build From Source
 
-### Quick Actions (In Player)
-- ⭐ **Star**: Protect from auto-deletion
-- 📤 **Share**: Export via AirDrop, Messages, etc.
-- 🗑️ **Delete**: Remove the recording
+Requirements:
 
-### Scroll to Top
-Tap the MemoK icon in the navigation bar to quickly scroll to the top of the page.
+- iOS `16.0` or later
+- Xcode with iOS development support
+- A physical iPhone for realistic background-audio testing
 
-## Tips
-- Star important recordings to prevent automatic deletion
-- Recordings continue in background when screen is locked
-- All data is stored locally - nothing is uploaded
+Steps:
 
----
+1. Open [RollingRecorderApp.xcodeproj](./RollingRecorderApp/RollingRecorderApp.xcodeproj).
+2. Select your signing team and bundle identifier if needed.
+3. Build and run on an iPhone.
+4. Grant microphone permission on first launch.
 
-# 中文
 
-## 开始使用
 
-### 首次启动
-1. 打开 MemoK，在提示时授予麦克风权限
-2. 应用将显示当前录音状态和时间安排
+## 中文
 
-### 开始录音
-- 点击 **开始录音** 按钮开始录制
-- 录音会根据设置自动分段保存
+MemoK 是一款面向 iPhone 的后台录音应用，适合会议、课堂、访谈和日常语音记录。
 
-### 停止录音
-- 点击 **停止录音** 按钮结束录音
-- 当前片段会自动保存
+它不是按“理想录音场景”设计的，而是围绕真实使用过程不断打磨出来的。很多近期优化都来自用户反馈，重点放在这些最容易出问题的地方：录音被打断、长录音难管理、录音时临时切出去拍照 / 录像，以及录完之后如何更快整理。
 
-## 功能介绍
+### 主要特点
 
-### 定时录音
-在设置中配置每日录音时间：
-- **开始时间**：录音可用的起始时间
-- **结束时间**：录音停止的时间
-- 仅在此时间段内录音
+#### 录音稳定性
 
-### 录音段时长
-选择每段录音的长度（5-60分钟）。一段结束后会自动开始新的一段。
+- 后台持续录音
+- 定时录音与全天录音
+- `1-180` 分钟自动分段
+- 被打断后的优先保存与自动恢复
+- 更注重与 dictation 等短暂音频接管场景共存
+- 切去拍照、录像等常见操作时尽量保持录音连续
 
-### 存储管理
-- 设置最大保留文件数
-- 达到限制时自动删除最旧的录音
-- **星标录音受保护**，不会被自动删除
+#### 回看与整理
 
-### 播放录音
-1. 点击任意录音的播放按钮
-2. 使用波形图跳转到任意位置
-3. 调整播放速度（0.5x - 2x）
-4. 使用上一个/下一个在录音间切换
+- 波形播放，便于快速定位
+- 录音附加快速笔记，导出为 Markdown
+- 批量导出 / 批量删除
+- 支持变量模板的自定义导出文件名
+- 星标保护重要文件
+- 自动清理多余文件
 
-### 快捷操作（播放器内）
-- ⭐ **星标**：保护不被自动删除
-- 📤 **分享**：通过隔空投送、信息等导出
-- 🗑️ **删除**：删除录音
+#### 其他细节
 
-### 回到顶部
-点击导航栏的 MemoK 图标可快速滚动到页面顶部。
+- 低 / 中 / 高三档音质
+- 深色 / 浅色 / 跟随系统主题
+- 每日统计与轻量诊断导出
+- 多语言支持
 
-## 小贴士
-- 给重要录音加星标防止自动删除
-- 锁屏时录音会在后台继续
-- 所有数据存储在本地，不会上传
+### 隐私与边界
 
----
+- 录音默认仅保存在本地设备
+- 默认不会上传到外部服务器
+- 不支持电话通话录音
+- 不录制第三方 App 音频流
 
-# Français
+录音前请遵守当地法律并取得相关同意。
 
-## Démarrage
+### 本地运行
 
-### Premier lancement
-1. Ouvrez MemoK et accordez l'autorisation du microphone
-2. L'application affiche votre statut d'enregistrement actuel
+环境要求：
 
-### Démarrer l'enregistrement
-- Appuyez sur **Démarrer** pour commencer l'enregistrement
-- Les enregistrements sont automatiquement sauvegardés par segments
+- iOS `16.0` 或更高版本
+- 已安装 Xcode
+- 建议使用真机测试后台录音与中断恢复
 
-### Arrêter l'enregistrement
-- Appuyez sur **Arrêter** pour terminer la session
-- Le segment en cours sera automatiquement sauvegardé
+步骤：
 
-## Fonctionnalités
+1. 打开 [RollingRecorderApp.xcodeproj](./RollingRecorderApp/RollingRecorderApp.xcodeproj)
+2. 如有需要，配置签名团队与 Bundle Identifier
+3. 在 iPhone 上编译运行
+4. 首次启动时授予麦克风权限
 
-### Enregistrement programmé
-Définissez les heures d'enregistrement quotidiennes dans les Paramètres :
-- **Heure de début** : Quand l'enregistrement devient disponible
-- **Heure de fin** : Quand l'enregistrement s'arrête
 
-### Durée des segments
-Choisissez la durée de chaque segment (5-60 minutes).
-
-### Gestion du stockage
-- Définissez le nombre maximum de fichiers à conserver
-- Les plus anciens sont automatiquement supprimés
-- **Les enregistrements favoris sont protégés**
-
-### Lecture des enregistrements
-1. Appuyez sur le bouton de lecture
-2. Utilisez la forme d'onde pour naviguer
-3. Ajustez la vitesse de lecture (0.5x - 2x)
-4. Utilisez Précédent/Suivant pour naviguer
-
-### Actions rapides (dans le lecteur)
-- ⭐ **Favori** : Protéger de la suppression automatique
-- 📤 **Partager** : Exporter via AirDrop, Messages, etc.
-- 🗑️ **Supprimer** : Supprimer l'enregistrement
-
----
-
-# Español
-
-## Primeros pasos
-
-### Primer inicio
-1. Abre MemoK y concede permiso de micrófono
-2. La app mostrará tu estado de grabación actual
-
-### Iniciar grabación
-- Toca **Iniciar** para comenzar a grabar
-- Las grabaciones se guardan automáticamente en segmentos
-
-### Detener grabación
-- Toca **Detener** para finalizar la sesión
-- El segmento actual se guardará automáticamente
-
-## Características
-
-### Grabación programada
-Configura las horas de grabación diarias en Ajustes:
-- **Hora de inicio**: Cuándo la grabación está disponible
-- **Hora de fin**: Cuándo se detiene la grabación
-
-### Duración de segmentos
-Elige la duración de cada segmento (5-60 minutos).
-
-### Gestión de almacenamiento
-- Establece el número máximo de archivos a conservar
-- Los más antiguos se eliminan automáticamente
-- **Las grabaciones destacadas están protegidas**
-
-### Reproducir grabaciones
-1. Toca el botón de reproducción
-2. Usa la forma de onda para navegar
-3. Ajusta la velocidad (0.5x - 2x)
-4. Usa Anterior/Siguiente para navegar
-
-### Acciones rápidas (en el reproductor)
-- ⭐ **Destacar**: Proteger de eliminación automática
-- 📤 **Compartir**: Exportar vía AirDrop, Mensajes, etc.
-- 🗑️ **Eliminar**: Eliminar la grabación
-
----
-
-# Italiano
-
-## Per iniziare
-
-### Primo avvio
-1. Apri MemoK e concedi l'autorizzazione al microfono
-2. L'app mostrerà lo stato di registrazione attuale
-
-### Avvia registrazione
-- Tocca **Avvia** per iniziare a registrare
-- Le registrazioni vengono salvate automaticamente in segmenti
-
-### Ferma registrazione
-- Tocca **Ferma** per terminare la sessione
-- Il segmento corrente verrà salvato automaticamente
-
-## Funzionalità
-
-### Registrazione programmata
-Imposta gli orari di registrazione giornalieri nelle Impostazioni:
-- **Ora di inizio**: Quando la registrazione diventa disponibile
-- **Ora di fine**: Quando la registrazione si ferma
-
-### Durata segmenti
-Scegli la durata di ogni segmento (5-60 minuti).
-
-### Gestione archiviazione
-- Imposta il numero massimo di file da conservare
-- I più vecchi vengono eliminati automaticamente
-- **Le registrazioni preferite sono protette**
-
-### Riproduzione registrazioni
-1. Tocca il pulsante di riproduzione
-2. Usa la forma d'onda per navigare
-3. Regola la velocità (0.5x - 2x)
-4. Usa Precedente/Successivo per navigare
-
-### Azioni rapide (nel lettore)
-- ⭐ **Preferito**: Proteggi dall'eliminazione automatica
-- 📤 **Condividi**: Esporta via AirDrop, Messaggi, ecc.
-- 🗑️ **Elimina**: Elimina la registrazione
-
----
-
-# العربية
-
-## البدء
-
-### التشغيل الأول
-1. افتح MemoK وامنح إذن الميكروفون
-2. سيعرض التطبيق حالة التسجيل الحالية
-
-### بدء التسجيل
-- اضغط على **بدء** لبدء التسجيل
-- يتم حفظ التسجيلات تلقائياً في مقاطع
-
-### إيقاف التسجيل
-- اضغط على **إيقاف** لإنهاء الجلسة
-- سيتم حفظ المقطع الحالي تلقائياً
-
-## الميزات
-
-### التسجيل المجدول
-اضبط ساعات التسجيل اليومية في الإعدادات:
-- **وقت البدء**: متى يصبح التسجيل متاحاً
-- **وقت الانتهاء**: متى يتوقف التسجيل
-
-### مدة المقاطع
-اختر مدة كل مقطع (5-60 دقيقة).
-
-### إدارة التخزين
-- حدد الحد الأقصى للملفات المحفوظة
-- يتم حذف الأقدم تلقائياً عند الوصول للحد
-- **التسجيلات المميزة محمية**
-
-### تشغيل التسجيلات
-1. اضغط على زر التشغيل
-2. استخدم شكل الموجة للتنقل
-3. اضبط سرعة التشغيل (0.5x - 2x)
-4. استخدم السابق/التالي للتنقل
-
-### الإجراءات السريعة (في المشغل)
-- ⭐ **تمييز**: حماية من الحذف التلقائي
-- 📤 **مشاركة**: تصدير عبر AirDrop والرسائل وغيرها
-- 🗑️ **حذف**: حذف التسجيل
-
----
-
-*MemoK - Your recordings stay with you.*
